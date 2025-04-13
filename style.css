@@ -16,13 +16,10 @@
 .screen>div {
     height: auto;
     flex: 1 0 auto;
-  
-    /* make columns vertical flexboxes */
     display: flex;
     flex-direction: column;
 }  
 .screen>div>* {
-    /* make rows evenly distributed */
     flex: 1;
 }
 .buttons {
