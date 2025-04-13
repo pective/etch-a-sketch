@@ -31,7 +31,9 @@ let ereaserMode = false;
 ereaser.addEventListener('click', () => {
     if (ereaserMode === false) {
         ereaserMode = true;
+        randomColorMode = false;
         ereaser.style.backgroundColor = "#0a459e";
+        randomColor.style.backgroundColor = "#444444"
     }
     else {
         ereaserMode = false;
@@ -42,7 +44,9 @@ ereaser.addEventListener('click', () => {
 randomColor.addEventListener('click', () => {
     if (randomColorMode === false) {
         randomColorMode = true;
+        ereaserMode = false;
         randomColor.style.backgroundColor = "#0a459e"
+        ereaser.style.backgroundColor = "#444444";
     } else {
         randomColorMode = false;
         randomColor.style.backgroundColor = "#444444"
