@@ -1,12 +1,15 @@
 let size = 16;
 
 const gridSize = document.querySelector(".gridSizeButton");
+let screen = document.querySelector(".screen");
+
 gridSize.addEventListener('click', () => {
-    
+    size = prompt("Enter the new size of the grid: ");
+    screen.innerHTML = '';
+    makeGrid(size);
 });
 
 function makeGrid(size) {
-    let screen = document.querySelector(".screen");
     for (let i = 0; i < size; i++) {
         let column = document.createElement("div");
         column.classList.add("column");
@@ -19,7 +22,3 @@ function makeGrid(size) {
         screen.appendChild(column);
     }
 }
-
-
-
-makeGrid(size);
