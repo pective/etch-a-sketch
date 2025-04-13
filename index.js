@@ -4,6 +4,12 @@ const gridSize = document.querySelector(".gridSizeButton");
 const randomColor = document.querySelector(".randomColorButton");
 const ereaser = document.querySelector(".ereaserButton");
 let screen = document.querySelector(".screen");
+let isDrawing = false; // Track whether mouse button is being held
+
+// Add event listeners to track mouse button state
+document.addEventListener('mousedown', () => isDrawing = true);
+document.addEventListener('mouseup', () => isDrawing = false);
+document.addEventListener('mouseleave', () => isDrawing = false); // Stop drawing if mouse leaves the window
 
 gridSize.addEventListener('click', () => {
     size = prompt("Enter the new size of the grid: ");
@@ -52,12 +58,15 @@ function makeGrid(size) {
             row.classList.add("row");
             row.style.border = "1px solid black";
             row.addEventListener('mouseover', () => {
-                if( randomColorMode === true ) {
-                    row.style.backgroundColor = getRandomColor();
-                } else if (ereaserMode === true) {
-                    row.style.backgroundColor = "#ffffff";
-                } else row.style.backgroundColor = "#444444";
-            })
+                if (isDrawing) {
+                    if (randomColorMode === true) {
+                        row.style.backgroundColor = getRandomColor();
+                    } else if (ereaserMode === true) {
+                        row.style.backgroundColor = "#ffffff";
+                    } else row.style.backgroundColor = "#444444";
+                }
+            });
+            
             column.appendChild(row);
         }
         screen.appendChild(column);
