@@ -21,7 +21,11 @@ function getRandomColor() {
     return color;
 }
 
-ereaser.addEventListener('click')
+let ereaserMode = false;
+ereaser.addEventListener('click', () => {
+    if (ereaserMode === false) { ereaserMode = true}
+    else ereaserMode = false;
+})
 
 randomColor.addEventListener('click', () => {
     if (randomColorMode === false) {
@@ -44,6 +48,8 @@ function makeGrid(size) {
             row.addEventListener('mouseover', () => {
                 if( randomColorMode === true ) {
                     row.style.backgroundColor = getRandomColor();
+                } else if (ereaserMode === true) {
+                    row.style.backgroundColor = "#ffffff";
                 } else row.style.backgroundColor = "#444444";
             })
             column.appendChild(row);
