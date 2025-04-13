@@ -17,7 +17,7 @@ function makeGrid(size) {
             let row = document.createElement("div");
             row.classList.add("row");
             row.style.border = "1px solid black";
-            row.addEventListener('click', () => {
+            row.addEventListener('mouseover', () => {
                 row.style.backgroundColor = "#444444";
             })
             column.appendChild(row);
