@@ -1,0 +1,28 @@
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 16px;
+  }
+.screen {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-around;
+    height: 700px;
+    width: 700px;
+    border: 1px solid black;
+}
+.screen>div {
+    height: auto;
+    flex: 1 0 auto;
+  
+    /* make columns vertical flexboxes */
+    display: flex;
+    flex-direction: column;
+}  
+.screen>div>* {
+    /* make rows evenly distributed */
+    flex: 1;
+}
+  
