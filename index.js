@@ -25,3 +25,5 @@ function makeGrid(size) {
         screen.appendChild(column);
     }
 }
+
+makeGrid(size);
