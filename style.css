@@ -25,4 +25,7 @@
     /* make rows evenly distributed */
     flex: 1;
 }
-  
+.screen>div>*:hover {
+    background-color: #444444;
+    border-color: #444444;
+}
