@@ -29,3 +29,22 @@
     background-color: #444444;
     border-color: #444444;
 }
+.buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 16px;
+}
+button {
+    background-color: #444444;
+    color: white;
+    border: 1px solid #000000;
+    border-radius: 4px;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+}
