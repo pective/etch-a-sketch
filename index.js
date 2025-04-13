@@ -23,8 +23,14 @@ function getRandomColor() {
 
 let ereaserMode = false;
 ereaser.addEventListener('click', () => {
-    if (ereaserMode === false) { ereaserMode = true}
-    else ereaserMode = false;
+    if (ereaserMode === false) {
+        ereaserMode = true;
+        ereaser.style.backgroundColor = "#0a459e";
+    }
+    else {
+        ereaserMode = false;
+        ereaser.style.backgroundColor = "#444444";
+    }
 })
 
 randomColor.addEventListener('click', () => {
