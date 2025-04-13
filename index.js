@@ -16,7 +16,10 @@ function makeGrid(size) {
         for (let j = 0; j < size; j++) {
             let row = document.createElement("div");
             row.classList.add("row");
-            row.style.border = "2px solid black";
+            row.style.border = "1px solid black";
+            row.addEventListener('click', () => {
+                row.style.backgroundColor = "#444444";
+            })
             column.appendChild(row);
         }
         screen.appendChild(column);
